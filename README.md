@@ -1,0 +1,1 @@
+# store-manager-frontend
