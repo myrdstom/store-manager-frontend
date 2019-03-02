@@ -9,8 +9,8 @@ function startReducer(state = InitialState) {
   return state;
 }
 
-const rootReducer = combineReducers({
+const mainReducer = combineReducers({
   start: startReducer
 });
 
-export default rootReducer;
+export default mainReducer;
