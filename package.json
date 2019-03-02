@@ -8,7 +8,8 @@
     "build": "webpack --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors"
+    "test:coverage": "jest --coverage --colors",
+    "heroku-postbuild": "npm run build"
   },
   "jest": {
     "testEnvironment": "node",
@@ -58,7 +59,6 @@
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-router-dom": "^4.3.1",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
     "react-toastify": "^4.5.2",
