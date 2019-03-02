@@ -5,18 +5,30 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
+    publicPath: '/',
     filename: 'bundle.js'
   },
-  module:{
-      rules:[{
+  module: {
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-      }]
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
+      }
+    ]
   },
   plugins: [
-      new HtmlWebpackPlugin({
-          template: './src/index.html'
-      })
-  ]
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
+  ],
+  devServer: {
+    contentBase: './dist',
+    hot: true,
+    historyApiFallback: true
+  }
 };
