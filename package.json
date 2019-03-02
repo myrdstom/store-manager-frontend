@@ -3,30 +3,67 @@
   "version": "1.0.0",
   "description": "Store Manager FrontEnd",
   "main": "index.js",
-  "scripts":{
-    "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --node production"
+  "scripts": {
+    "start": "webpack-dev-server --port 4000 --config ./webpack.config.js --mode development --open",
+    "build": "webpack --mode production",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/src/redux/store/combineStore.js",
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/redux/reducers/mainReducer.js",
+      "<rootDir>/src/react/routes/index.js"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/setupTests.js",
+      "!src/index.js",
+      "!**/node_modules/**"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "repository": "https://github.com/myrdstom/store-manager-frontend.git",
   "author": "myrdstom <nserekopaul@gmail.com>",
   "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.4.2",
+    "react-hot-loader": "^4.7.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  },
   "dependencies": {
     "express": "^4.16.4",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-router-dom": "^4.3.1",
     "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-toastify": "^4.5.2",
     "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1"
   }
 }
