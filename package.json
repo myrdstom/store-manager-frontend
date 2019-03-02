@@ -20,7 +20,8 @@
       "<rootDir>/src/redux/store/combineStore.js",
       "<rootDir>/src/index.js",
       "<rootDir>/src/redux/reducers/mainReducer.js",
-      "<rootDir>/src/react/routes/index.js"
+      "<rootDir>/src/react/routes/index.js",
+      "<rootDir>/src/react/views/products/ProductView.js"
     ],
     "collectCoverage": true,
     "collectCoverageFrom": [
@@ -31,13 +32,19 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    
+      "testPathIgnorePatterns" : ["<rootDir>/src/index.js/" ]
+  
+    
   },
+
   "repository": "https://github.com/myrdstom/store-manager-frontend.git",
   "author": "myrdstom <nserekopaul@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/polyfill": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
@@ -55,8 +62,10 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.4",
     "html-webpack-plugin": "^3.2.0",
+    "jest-mock-axios": "^2.1.11",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
@@ -64,6 +73,8 @@
     "react-toastify": "^4.5.2",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0",
+    "toastify": "^1.0.12"
   }
 }

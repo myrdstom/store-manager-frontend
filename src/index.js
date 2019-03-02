@@ -4,6 +4,7 @@ import App from './react/components/App';
 import { Provider } from 'react-redux';
 import store from './redux/store/combineStore';
 import Routes from './react/routes/index';
+import './styles/styles.css';
 
 ReactDOM.render(
   <Provider store={store}>

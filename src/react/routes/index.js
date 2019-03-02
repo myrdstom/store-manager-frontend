@@ -1,18 +1,16 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-
-import HomeView from '../views/HomeView.js';
-import AboutView from '../views/AboutView';
-import Header from '../components/Header';
-import WelcomeMessage from '../views/WelcomeMessage';
+import { ToastContainer } from 'react-toastify';
+import loginView from '../views/login/LoginView'
+import 'react-toastify/dist/ReactToastify.min.css'
+import ProductView from '../views/products/ProductView'
 
 const Routes = () => (
     <Router>
       <div>
-        <Header />
-        <Route exact path="/" component={HomeView} />
-        <Route exact path="/about" component={AboutView} />
-        <Route exact path="/welcome" component={WelcomeMessage} />
+        <Route exact path="/" component={loginView} />
+        <Route exact path="/products" component={ProductView} />
+        <ToastContainer />
       </div>
     </Router>
   );
