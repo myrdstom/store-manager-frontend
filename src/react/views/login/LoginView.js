@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { postLogin } from '../../../redux/actions/login/loginAction';
 
 export class LoginView extends Component {
@@ -57,7 +56,7 @@ export class LoginView extends Component {
                 onChange={this.onChange}
               />
               <input
-                type="text"
+                type="password"
                 id="password"
                 className="fadeIn third"
                 name="password"

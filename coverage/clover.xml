@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1551601940846" clover="3.2.0">
-  <project timestamp="1551601940847" name="All files">
+<coverage generated="1551603374334" clover="3.2.0">
+  <project timestamp="1551603374334" name="All files">
     <metrics statements="65" coveredstatements="54" conditionals="12" coveredconditionals="8" methods="22" coveredmethods="16" elements="99" coveredelements="78" complexity="0" loc="65" ncloc="65" packages="7" files="9" classes="9">
       <package name="react.views.login">
         <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>

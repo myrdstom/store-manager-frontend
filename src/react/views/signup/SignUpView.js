@@ -78,7 +78,7 @@ export class SignUpView extends Component {
                 onChange={this.onChange}
                 value={password}
               />
-              <input type="submit" className="fadeIn fourth" value="Log In" />
+              <input type="submit" className="fadeIn fourth" value="Sign Up" />
             </form>
             <div id="formFooter" />
           </div>

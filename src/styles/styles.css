@@ -43,8 +43,8 @@ html {
     border-radius: 10px 10px 10px 10px;
     background: #fff;
     padding: 30px;
-    width: 90%;
-    max-width: 450px;
+    width: 50%;
+    /* max-width: 450px; */
     position: relative;
     padding: 0px;
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
@@ -332,3 +332,15 @@ html {
     color: #cccccc;
   }
   
+
+  .form-horizontal{
+    margin-top:10%;
+  }
+
+
+@media only screen and (max-width: 1000px) {
+  #formContent{
+    width: 80%;
+   
+  }
+}

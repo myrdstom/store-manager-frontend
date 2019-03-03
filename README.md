@@ -8,13 +8,23 @@ Store Manager is a web application that helps store owners manage sales and prod
 
 ### Run the application
 
-Follw the link to where the application is hosted: `https://dashboard.heroku.com/apps/staging-frontend-store-manager` to run the appliaction
+Follw the link to where the application is hosted: `https://staging-frontend-store-manager.herokuapp.com/` to run the appliaction
+
+Login with the credentials below
+
+```
+{
+    "username":"admin",
+    "password":"password"
+}
+
+```
 
 ### HTTP Requests
 
 So far the application can has functionality that demonstrates both signup and login
 
-### Test th application's functionality
+### Test the application's functionality
 
 - Clone the github repository: `https://github.com/myrdstom/store-manager-frontend.git`
 - Checkout into the develop branch
