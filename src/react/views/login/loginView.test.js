@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoginView, mapStateToProps } from './LoginView';
+import { LoginView } from './LoginView';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
