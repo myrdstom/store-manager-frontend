@@ -21,8 +21,8 @@ export class ProductView extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto" />
             <form className="form-inline my-2 my-lg-0">
-              <Link to="/signup" class="nav-link" href="#">
-                Sign Up <span class="sr-only">(current)</span>
+              <Link to="/signup" className="nav-link" href="#">
+                Sign Up <span className="sr-only">(current)</span>
               </Link>
               <Link to="/" className="nav-link" href="#">
                 Login
