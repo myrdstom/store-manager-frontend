@@ -1,16 +1,14 @@
     
 import { combineReducers } from 'redux';
+import loginReducer from './loginReducer/loginReducer'
 
 const InitialState = {
   start: false
 };
 
-function startReducer(state = InitialState) {
-  return state;
-}
 
 const mainReducer = combineReducers({
-  start: startReducer
+  loginReducer
 });
 
 export default mainReducer;

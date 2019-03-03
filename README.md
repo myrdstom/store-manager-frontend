@@ -9,6 +9,10 @@ Store Manager is a web application that helps store owners manage sales and prod
 
 # Setup
 
+
+
+
+
 # Build
 
 # HTTP Requests
