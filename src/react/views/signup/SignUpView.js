@@ -79,6 +79,10 @@ export class SignUpView extends Component {
                 value={password}
               />
               <input type="submit" className="fadeIn fourth" value="Sign Up" />
+              <Link to="/" className="fadeIn fourth" id="reset">
+                  Cancel
+                </Link>
+
             </form>
             <div id="formFooter" />
           </div>

@@ -6,7 +6,7 @@ export class ProductView extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          Store Manager
+          <h3>Store Manager</h3>
           <button
             className="navbar-toggler"
             type="button"
@@ -15,20 +15,16 @@ export class ProductView extends Component {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto" />
-            <form className="form-inline my-2 my-lg-0">
-              <Link to="/signup" className="nav-link" href="#">
-                Sign Up <span className="sr-only">(current)</span>
-              </Link>
-              <Link to="/" className="nav-link" href="#">
-                Login
-              </Link>
-            </form>
-          </div>
+          />
+          <ul className="navbar-nav mr-auto" />
+          <form className="form-inline my-2 my-lg-0">
+            <Link to="/signup" className="nav-link" href="#">
+             <h3> Sign Up</h3> <span className="sr-only">(current)</span>
+            </Link>
+            <Link to="/" className="nav-link" href="#">
+              <h3>Login</h3>
+            </Link>
+          </form>
         </nav>
         <div className="jumbotron">
           <h1 className="display-4">Welcome to the Store Manager!!!</h1>

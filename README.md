@@ -20,6 +20,12 @@ Login with the credentials below
 
 ```
 
+#### Notes
+
+* You cannot register a new user without logging in
+* Admin credentials for the account have been provided
+* The products page is just a page with dummy data to demonstrate redirection
+
 ### HTTP Requests
 
 So far the application can has functionality that demonstrates both signup and login
