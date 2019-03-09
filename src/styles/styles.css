@@ -1,8 +1,13 @@
 
 
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   height: 100vh;
+}
+
+h1{
+  color: #5fbae9;
 }
 
 a {
@@ -144,7 +149,7 @@ input[type='text']:placeholder {
 
 /* Simple CSS3 Fade-in-down Animation */
 .fadeInDown {
-  margin-top:10%;
+  margin-top:5%;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   -webkit-animation-duration: 1s;
@@ -422,7 +427,7 @@ input[type='email']:placeholder {
     font-size: 30px;
   }
   .fadeInDown {
-    margin-top:30%;
+    margin-top:15%;
 }
 
 }

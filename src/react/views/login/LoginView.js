@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { postLogin } from '../../../redux/actions/login/loginAction';
 import Loader from '../Loader';
+import PropTypes from 'prop-types';
 
 export class LoginView extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ export class LoginView extends Component {
       password: '',
       success: false,
       loading: false,
-      error:{}
+      error: {}
     };
     this.onChange = this.onChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,14 +20,13 @@ export class LoginView extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { history, success, error } = nextProps;
-    if(error){
-      this.setState({loading: false});
+    if (error) {
+      this.setState({ loading: false });
     }
     if (success === true) {
-      this.setState({ success: true});
+      this.setState({ success: true });
       history.push('/products');
     }
-    
   }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -38,7 +38,7 @@ export class LoginView extends Component {
       username: this.state.username,
       password: this.state.password
     };
-    this.setState({loading: true});
+    this.setState({ loading: true });
     this.props.postLogin(updLogin);
   }
 
@@ -46,7 +46,11 @@ export class LoginView extends Component {
     const { username, password } = this.state;
     return (
       <div>
+        <nav className="navbar navbar-light bg-light">
+          <span className="navbar-brand mb-0 h1">Login</span>
+        </nav>
         <div className="wrapper fadeInDown">
+          <h1>Welcome Back</h1>
           <div id="formContent">
             <form
               onSubmit={this.handleSubmit}
@@ -54,10 +58,11 @@ export class LoginView extends Component {
               className="form-horizontal"
               role="form"
             >
-            {this.state.loading ? <Loader /> : null}
+              {this.state.loading ? <Loader /> : null}
 
               <input
                 type="text"
+                required={true}
                 id="login"
                 className="fadeIn second"
                 name="username"
@@ -67,6 +72,7 @@ export class LoginView extends Component {
               />
               <input
                 type="password"
+                required={true}
                 id="password"
                 className="fadeIn third"
                 name="password"
@@ -84,6 +90,11 @@ export class LoginView extends Component {
   }
 }
 
+LoginView.propTypes = {
+  login: PropTypes.object.isRequired,
+  success: PropTypes.bool.isRequired,
+  error: PropTypes.object.isRequired
+};
 export const mapStateToProps = state => {
   return {
     login: state.loginReducer.login,
