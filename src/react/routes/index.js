@@ -13,7 +13,8 @@ const Routes = () => (
         <Route exact path="/signup" component={SignUpView} />
         <Route exact path="/products" component={ProductView} />
 
-        <ToastContainer />
+        <ToastContainer 
+        autoClose={2000}/>
       </div>
     </Router>
   );

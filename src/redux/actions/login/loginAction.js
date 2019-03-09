@@ -12,17 +12,19 @@ export const postLogin = updLogin => dispatch => {
     .then(response => {
       dispatch({
         type: LOGIN_SUCCESS,
-        payload: response.data.login,
+        payload: response.data,
         
       });
+      console.log(response.data);
       toast.success('You have logged in');
-      window.localStorage.setItem('token', response.data['access_token'])     
+      window.localStorage.setItem('token', response.data['access_token'])   
     })
     .catch(error =>{
         dispatch({
             type: LOGIN_FAIL,
             error: error.response
         })
+        
         toast.error(error.response.data.message);
     })
 };
