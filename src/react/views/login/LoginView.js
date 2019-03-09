@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { postLogin } from '../../../redux/actions/login/loginAction';
+import Loader from '../Loader';
 
 export class LoginView extends Component {
   constructor(props) {
@@ -8,19 +9,25 @@ export class LoginView extends Component {
     this.state = {
       username: '',
       password: '',
-      success: false
+      success: false,
+      loading: false,
+      error:{}
     };
     this.onChange = this.onChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    const { history, success } = nextProps;
-    if(success=== true) {
-        this.setState({success:true})
-        history.push('/products');
+    const { history, success, error } = nextProps;
+    if(error){
+      this.setState({loading: false});
     }
-}
+    if (success === true) {
+      this.setState({ success: true});
+      history.push('/products');
+    }
+    
+  }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -31,6 +38,7 @@ export class LoginView extends Component {
       username: this.state.username,
       password: this.state.password
     };
+    this.setState({loading: true});
     this.props.postLogin(updLogin);
   }
 
@@ -46,6 +54,8 @@ export class LoginView extends Component {
               className="form-horizontal"
               role="form"
             >
+            {this.state.loading ? <Loader /> : null}
+
               <input
                 type="text"
                 id="login"
@@ -76,10 +86,10 @@ export class LoginView extends Component {
 
 export const mapStateToProps = state => {
   return {
-  login: state.loginReducer.login,
-  success: state.loginReducer.success
-  }
-  
+    login: state.loginReducer.login,
+    success: state.loginReducer.success,
+    error: state.loginReducer.error
+  };
 };
 
 export default connect(

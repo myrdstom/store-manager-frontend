@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { postSignup } from '../../../redux/actions/signup/singupAction';
+import Loader from '../Loader';
 
 export class SignUpView extends Component {
   constructor(props) {
@@ -10,16 +11,21 @@ export class SignUpView extends Component {
       username: '',
       email: '',
       password: '',
-      success: false
+      success: false,
+      error:{}
     };
     this.onChange = this.onChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    const { history, success } = nextProps;
+    const { history, success, error } = nextProps;
+    if(error){
+      this.setState({loading: false});
+    }
     if (success === true) {
       this.setState({ success: true });
+      window.localStorage.clear()
       history.push('/');
     }
   }
@@ -35,6 +41,7 @@ export class SignUpView extends Component {
       password: this.state.password,
       email: this.state.email
     };
+    this.setState({loading: true});
     this.props.postSignup(updSignup);
   }
 
@@ -50,6 +57,7 @@ export class SignUpView extends Component {
               className="form-horizontal"
               role="form"
             >
+            {this.state.loading ? <Loader /> : null}
               <input
                 type="text"
                 id="login"
@@ -79,7 +87,7 @@ export class SignUpView extends Component {
                 value={password}
               />
               <input type="submit" className="fadeIn fourth" value="Sign Up" />
-              <Link to="/" className="fadeIn fourth" id="reset">
+              <Link to="/products" className="fadeIn fourth" id="reset">
                   Cancel
                 </Link>
 
@@ -95,7 +103,8 @@ export class SignUpView extends Component {
 export const mapStateToProps = state => {
   return {
     signup: state.signupReducer.signup,
-    success: state.signupReducer.success
+    success: state.signupReducer.success,
+    error: state.signupReducer.error
   };
 };
 

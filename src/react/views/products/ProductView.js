@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ export class ProductView extends Component {
           <ul className="navbar-nav mr-auto" />
           <form className="form-inline my-2 my-lg-0">
             <Link to="/signup" className="nav-link" href="#">
-             <h3> Sign Up</h3> <span className="sr-only">(current)</span>
+              <h3> Sign Up</h3> <span className="sr-only">(current)</span>
             </Link>
             <Link to="/" className="nav-link" href="#">
               <h3>Login</h3>

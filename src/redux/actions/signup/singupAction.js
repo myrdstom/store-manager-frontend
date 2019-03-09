@@ -17,7 +17,7 @@ export const postSignup = updSignup => dispatch => {
     .then(response => {
       dispatch({
         type: SIGNUP_SUCCESS,
-        payload: response.data.login
+        payload: response.data
       });
       toast.success('You have signed up');
     })
