@@ -2,7 +2,8 @@ import { LOGIN_FAIL, LOGIN_SUCCESS } from '../../actions/login/types';
 
 const initialState = {
   login: {},
-  error: null
+  error: {},
+  success: false
 };
 
 const loginReducer = (state = initialState, action) => {

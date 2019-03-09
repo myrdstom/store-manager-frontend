@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { postSignup } from '../../../redux/actions/signup/singupAction';
+import PropTypes from 'prop-types';
+import Loader from '../Loader';
 
 export class SignUpView extends Component {
   constructor(props) {
@@ -10,14 +12,20 @@ export class SignUpView extends Component {
       username: '',
       email: '',
       password: '',
-      success: false
+      success: false,
+      loading: false,
+      error: {}
     };
     this.onChange = this.onChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    const { history, success } = nextProps;
+    const { history, success, error } = nextProps;
+    console.log(nextProps);
+    if (success === false) {
+      this.setState({ loading: false });
+    }
     if (success === true) {
       this.setState({ success: true });
       history.push('/');
@@ -35,6 +43,7 @@ export class SignUpView extends Component {
       password: this.state.password,
       email: this.state.email
     };
+    this.setState({ loading: true });
     this.props.postSignup(updSignup);
   }
 
@@ -42,7 +51,11 @@ export class SignUpView extends Component {
     const { username, password, email } = this.state;
     return (
       <div>
+        <nav className="navbar navbar-light bg-light">
+          <span className="navbar-brand mb-0 h1">SignUp</span>
+        </nav>
         <div className="wrapper fadeInDown">
+          <h1>Register a User</h1>
           <div id="formContent">
             <form
               onSubmit={this.handleSubmit}
@@ -50,8 +63,10 @@ export class SignUpView extends Component {
               className="form-horizontal"
               role="form"
             >
+            {this.state.loading ? <Loader /> : null}
               <input
                 type="text"
+                required={true}
                 id="login"
                 className="fadeIn second"
                 name="username"
@@ -61,6 +76,7 @@ export class SignUpView extends Component {
               />
               <input
                 type="email"
+                required={true}
                 id="email"
                 type="email"
                 className="fadeIn second"
@@ -71,6 +87,7 @@ export class SignUpView extends Component {
               />
               <input
                 type="password"
+                required={true}
                 id="password"
                 className="fadeIn third"
                 name="password"
@@ -80,9 +97,8 @@ export class SignUpView extends Component {
               />
               <input type="submit" className="fadeIn fourth" value="Sign Up" />
               <Link to="/" className="fadeIn fourth" id="reset">
-                  Cancel
-                </Link>
-
+                Cancel
+              </Link>
             </form>
             <div id="formFooter" />
           </div>
@@ -91,6 +107,11 @@ export class SignUpView extends Component {
     );
   }
 }
+
+SignUpView.propTypes = {
+  signup: PropTypes.object.isRequired,
+  error: PropTypes.object.isRequired
+};
 
 export const mapStateToProps = state => {
   return {
