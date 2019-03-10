@@ -1,14 +1,21 @@
-
+@import url('https://fonts.googleapis.com/css?family=Pacifico%7CPoppins');
 
 
 body {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica', 'sans-serif';
   height: 100vh;
 }
 
 h1{
   color: #5fbae9;
+  
+
 }
+
+.logo{
+  font-family: 'Pacifico';
+}
+
 
 a {
   color: #92badd;

@@ -22,10 +22,11 @@ export class LoginView extends Component {
     const { history, success, error } = nextProps;
     if (error) {
       this.setState({ loading: false });
+      // console.log(error.data.message)
     }
     if (success === true) {
       this.setState({ success: true });
-      history.push('/products');
+      history.push('/');
     }
   }
   onChange(e) {
@@ -44,13 +45,15 @@ export class LoginView extends Component {
 
   render() {
     const { username, password } = this.state;
+
     return (
       <div>
         <nav className="navbar navbar-light bg-light">
           <span className="navbar-brand mb-0 h1">Login</span>
         </nav>
         <div className="wrapper fadeInDown">
-          <h1>Welcome Back</h1>
+          <h1 className="logo">Store Manager</h1>
+          <h1>Login Please</h1>
           <div id="formContent">
             <form
               onSubmit={this.handleSubmit}
@@ -70,6 +73,11 @@ export class LoginView extends Component {
                 value={username}
                 onChange={this.onChange}
               />
+
+              {/* this.props.error.data && this.props.error.data.message === 'Error: wrong password' ?
+                (<p>{this.props.error.data.message}</p>) : null
+              */}
+
               <input
                 type="password"
                 required={true}
@@ -80,6 +88,7 @@ export class LoginView extends Component {
                 onChange={this.onChange}
                 value={password}
               />
+
               <input type="submit" className="fadeIn fourth" value="Log In" />
             </form>
             <div id="formFooter" />

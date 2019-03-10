@@ -5,4 +5,5 @@ yarn-error.log
 dist/bundle.js
 coverage
 package-lock.json
-
+.idea/
+.idea/workspace.xml

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { postSignup } from '../../../redux/actions/signup/singupAction';
 import PropTypes from 'prop-types';
 import Loader from '../Loader';
+import { toast } from 'react-toastify';
+
 
 export class SignUpView extends Component {
   constructor(props) {
@@ -53,6 +55,7 @@ export class SignUpView extends Component {
           <span className="navbar-brand mb-0 h1">SignUp</span>
         </nav>
         <div className="wrapper fadeInDown">
+        <h1 className="logo">Store Manager</h1>
           <h1>Register a User</h1>
           <div id="formContent">
             <form
@@ -108,6 +111,7 @@ export class SignUpView extends Component {
 
 SignUpView.propTypes = {
   signup: PropTypes.object.isRequired,
+  success: PropTypes.bool.isRequired,
   error: PropTypes.object.isRequired
 };
 

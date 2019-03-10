@@ -19,7 +19,6 @@ export const postSignup = updSignup => dispatch => {
         type: SIGNUP_SUCCESS,
         payload: response.data
       });
-      toast.success('You have signed up');
     })
     .catch(error => {
       dispatch({

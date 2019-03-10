@@ -2,7 +2,8 @@ import { SIGNUP_FAIL , SIGNUP_SUCCESS } from '../../actions/signup/types';
 
 const initialState = {
   signup: {},
-  error: {}
+  error: {},
+  success: false
 };
 
 const signupReducer = (state = initialState, action) => {

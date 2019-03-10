@@ -13,12 +13,11 @@ describe('Testing signing up', () => {
   it('dispatch an action for signing in', () => {
     mockAxios.post(
       `https://store-manager-heroku.herokuapp.com/api/v1/`,
-      { username: 'paul', password: 'password', email: 'paul@gmail.com' },
       {
         Authorization: 'accessToken'
       }
     );
-    store
+    return store
       .dispatch(
         postSignup({
           username: 'paul',
@@ -27,9 +26,9 @@ describe('Testing signing up', () => {
         })
       )
       .then(() => {
-        expect(store.getActions()).toEqual(
-          expect.objectContaining([{ type: SIGNUP_SUCCESS }])
-        );
+        const signup  = store.getActions()
+        expect(signup.length).toBe(1)
+        
       });
   });
   it('will dispatch an error', () => {
@@ -41,9 +40,12 @@ describe('Testing signing up', () => {
       }
     );
     store.dispatch(postSignup({ username: 'paul' })).then(() => {
+      const signup  = store.getActions()
       expect(store.getActions()).toEqual(
         expect.objectContaining([{ type: SIGNUP_FAIL }])
+        
       );
+      console.log(store.getActions());
     });
   });
 });

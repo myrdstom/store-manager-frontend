@@ -17,7 +17,11 @@ describe('loginView', () => {
     wrapper = shallow(
       <LoginView postLogin={mockloginSuccessfn} history={historyMock} />
     );
-
+    it('should load the loader', () =>{
+      wrapper
+      .find('loader')
+      .find('#loader')
+    })
     it('Should log you in', () => {
       wrapper
         .find('#login')
@@ -29,5 +33,6 @@ describe('loginView', () => {
       wrapper.setProps({ success: true });
       expect(wrapper.state('success')).toEqual(true);
     });
+    
   });
 });

@@ -9,9 +9,9 @@ import ProductView from '../views/products/ProductView'
 const Routes = () => (
     <Router>
       <div>
-        <Route exact path="/" component={loginView} />
+        <Route exact path="/login" component={loginView} />
         <Route exact path="/signup" component={SignUpView} />
-        <Route exact path="/products" component={ProductView} />
+        <Route exact path="/" component={ProductView} />
 
         <ToastContainer 
         autoClose={2000}/>

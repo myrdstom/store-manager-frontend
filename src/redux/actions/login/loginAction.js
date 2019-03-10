@@ -15,9 +15,9 @@ export const postLogin = updLogin => dispatch => {
         payload: response.data,
         
       });
-      console.log(response.data);
       toast.success('You have logged in');
-      window.localStorage.setItem('token', response.data['access_token'])   
+      window.localStorage.setItem('token', response.data['access_token'])
+      window.localStorage.setItem('username', response.data['username'])     
     })
     .catch(error =>{
         dispatch({

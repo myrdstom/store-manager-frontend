@@ -1,50 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1551969768362" clover="3.2.0">
-  <project timestamp="1551969768362" name="All files">
-    <metrics statements="66" coveredstatements="55" conditionals="12" coveredconditionals="8" methods="22" coveredmethods="16" elements="100" coveredelements="79" complexity="0" loc="66" ncloc="66" packages="7" files="9" classes="9">
+<coverage generated="1552660420196" clover="3.2.0">
+  <project timestamp="1552660420196" name="All files">
+    <metrics statements="73" coveredstatements="67" conditionals="18" coveredconditionals="13" methods="23" coveredmethods="19" elements="114" coveredelements="99" complexity="0" loc="73" ncloc="73" packages="8" files="10" classes="10">
+      <package name="react.views">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="Loader.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/react/views/Loader.js">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="4" count="0" type="stmt"/>
+        </file>
+      </package>
       <package name="react.views.login">
-        <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
+        <metrics statements="20" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="6" coveredmethods="5"/>
         <file name="LoginView.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/react/views/login/LoginView.js">
-          <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <metrics statements="20" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="6" coveredmethods="5"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
           <line num="18" count="1" type="stmt"/>
-          <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="20" count="1" type="stmt"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="28" count="1" type="stmt"/>
           <line num="29" count="1" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="38" count="3" type="stmt"/>
-          <line num="39" count="3" type="stmt"/>
-          <line num="77" count="1" type="stmt"/>
-          <line num="78" count="0" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="47" count="4" type="stmt"/>
+          <line num="49" count="4" type="stmt"/>
+          <line num="102" count="1" type="stmt"/>
+          <line num="107" count="1" type="stmt"/>
+          <line num="108" count="0" type="stmt"/>
         </file>
       </package>
       <package name="react.views.signup">
-        <metrics statements="17" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
+        <metrics statements="19" coveredstatements="17" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="5"/>
         <file name="SignUpView.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/react/views/signup/SignUpView.js">
-          <metrics statements="17" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
-          <line num="21" count="1" type="cond" truecount="1" falsecount="1"/>
+          <metrics statements="19" coveredstatements="17" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="5"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
           <line num="22" count="1" type="stmt"/>
-          <line num="23" count="1" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="28" count="1" type="stmt"/>
           <line num="29" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="39" count="1" type="stmt"/>
-          <line num="43" count="3" type="stmt"/>
-          <line num="44" count="3" type="stmt"/>
-          <line num="96" count="1" type="stmt"/>
-          <line num="97" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="51" count="4" type="stmt"/>
+          <line num="52" count="4" type="stmt"/>
+          <line num="112" count="1" type="stmt"/>
+          <line num="118" count="1" type="stmt"/>
+          <line num="119" count="0" type="stmt"/>
         </file>
       </package>
       <package name="redux.actions">
@@ -55,17 +68,18 @@
         </file>
       </package>
       <package name="redux.actions.login">
-        <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <file name="loginAction.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/redux/actions/login/loginAction.js">
-          <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
           <line num="6" count="2" type="stmt"/>
           <line num="7" count="2" type="stmt"/>
           <line num="10" count="2" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="18" count="0" type="stmt"/>
-          <line num="19" count="0" type="stmt"/>
-          <line num="22" count="0" type="stmt"/>
-          <line num="26" count="0" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
         </file>
         <file name="types.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/redux/actions/login/types.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -74,17 +88,16 @@
         </file>
       </package>
       <package name="redux.actions.signup">
-        <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <file name="singupAction.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/redux/actions/signup/singupAction.js">
-          <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
           <line num="7" count="2" type="stmt"/>
           <line num="9" count="2" type="stmt"/>
           <line num="10" count="2" type="stmt"/>
           <line num="15" count="2" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
-          <line num="22" count="0" type="stmt"/>
-          <line num="25" count="0" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
         </file>
         <file name="types.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/redux/actions/signup/types.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -97,11 +110,11 @@
         <file name="loginReducer.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/redux/reducers/loginReducer/loginReducer.js">
           <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
           <line num="3" count="1" type="stmt"/>
-          <line num="8" count="1" type="cond" truecount="0" falsecount="1"/>
-          <line num="9" count="3" type="cond" truecount="3" falsecount="0"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
-          <line num="23" count="1" type="stmt"/>
+          <line num="9" count="1" type="cond" truecount="0" falsecount="1"/>
+          <line num="10" count="3" type="cond" truecount="3" falsecount="0"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
         </file>
       </package>
       <package name="redux.reducers.signupReducer">
@@ -109,11 +122,11 @@
         <file name="signupReducer.js" path="/Users/home/Documents/LMS 8.1/store-manager-frontend/src/redux/reducers/signupReducer/signupReducer.js">
           <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
           <line num="3" count="1" type="stmt"/>
-          <line num="8" count="1" type="cond" truecount="0" falsecount="1"/>
-          <line num="9" count="3" type="cond" truecount="3" falsecount="0"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
-          <line num="23" count="1" type="stmt"/>
+          <line num="9" count="1" type="cond" truecount="0" falsecount="1"/>
+          <line num="10" count="3" type="cond" truecount="3" falsecount="0"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>
