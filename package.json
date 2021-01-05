@@ -62,7 +62,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "html-webpack-plugin": "^4.3.0",
     "jest-mock-axios": "^4.2.0",
